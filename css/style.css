@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    font-family: 'Oswald', bold;
+    font-size: medium;
+}
+
+body{
+    background-color: #181818;
+}
+
+input{
+    max-width: fit-content;
+    margin-top: 1rem;
+    outline: none;
+}
+label{
+    color: aliceblue;
+    margin-top: 1rem;
+}
+
+textarea{
+    margin-top: 1rem;
+    background-color: grey;
+    border: none;
+    border-radius: 0.2rem;
+    color: aliceblue;
+    max-width: fit-content;
+    min-height: 2rem;
+    min-width: 15rem;
+}
+
+button{
+    margin-top: 1rem;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+}
+
+h2{
+    margin-top: 1rem;
+    color: aliceblue;
+}
+
+div.flex-center{
+    justify-content: space-around;
+}
+
+.new-todo{
+    background-color: cadetblue;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 0.2rem;
+}
+.flex-center{
+    display:flex;
+    justify-content: center;
+}
+
+.flex-grid{
+    display: grid;
+    justify-content: center;
+}
