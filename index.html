@@ -11,7 +11,7 @@
         <h2 class="flex-center">TODO-LIST TO SHIT ON CLEMENT</h2>
     </header>
     <main>
-        <button onclick="showForm()" class="add">Create task</button>
+        <button onclick="showForm(this)" class="add">Create task</button>
         <section class="new-todo">
             <form class="flex-grid" action="" method="get">
                 <label for="title">TODO name</label>
@@ -34,7 +34,7 @@
                     <input type="radio" name="priority" id="priority">
                 </div>
 
-                <button onclick="getDatas()" type="submit">Add a new task</button>
+                <button onclick="getTask()" type="submit">Add a new task</button>
             </form>
         </section>
         <section class="todo-list"></section>
