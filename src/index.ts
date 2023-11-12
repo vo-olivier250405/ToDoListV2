@@ -43,27 +43,31 @@ function createTask(datas: any) {
   const divInfos = document.createElement("div");
   const span0 = document.createElement("span");
   const span1 = document.createElement("span");
-  span0.innerHTML = "\u00d7";
-  span1.innerHTML = "stylou";
+  const date = document.createElement("p");
+  const title = document.createElement("h3");
+
+  span0.innerHTML = "ⓧ";
+  span1.innerHTML = "ⓘ";
+  span0.setAttribute("onclick", "deleteTask(this)");
   div.className = "tasks";
   divInfos.className = "infos";
+  title.innerHTML = `${datas[0]}`;
+  date.innerHTML = `${datas[1]}`;
+
   divInfos.appendChild(span0);
   divInfos.appendChild(span1);
-
-  const title = document.createElement("h3");
-  title.innerHTML = `${datas[0]}`;
-  const date = document.createElement("p");
-  date.innerHTML = `${datas[1]}`;
   div.appendChild(divInfos);
   div.appendChild(title);
   div.appendChild(date);
   li.appendChild(div);
   toDoList.appendChild(li);
+
   saveDatas();
 }
 
 function deleteTask(element: HTMLSpanElement) {
-  element.parentElement?.remove();
+  /**Fonction qui supprime une tâche */
+  element.parentElement?.parentElement?.parentElement?.remove();
   saveDatas();
 }
 const toDoList = document.getElementById("list") as HTMLUListElement;

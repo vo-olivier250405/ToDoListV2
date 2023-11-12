@@ -42,16 +42,17 @@ function createTask(datas) {
     const divInfos = document.createElement("div");
     const span0 = document.createElement("span");
     const span1 = document.createElement("span");
-    span0.innerHTML = "\u00d7";
-    span1.innerHTML = "stylou";
+    const date = document.createElement("p");
+    const title = document.createElement("h3");
+    span0.innerHTML = "ⓧ";
+    span1.innerHTML = "ⓘ";
+    span0.setAttribute("onclick", "deleteTask(this)");
     div.className = "tasks";
     divInfos.className = "infos";
+    title.innerHTML = `${datas[0]}`;
+    date.innerHTML = `${datas[1]}`;
     divInfos.appendChild(span0);
     divInfos.appendChild(span1);
-    const title = document.createElement("h3");
-    title.innerHTML = `${datas[0]}`;
-    const date = document.createElement("p");
-    date.innerHTML = `${datas[1]}`;
     div.appendChild(divInfos);
     div.appendChild(title);
     div.appendChild(date);
@@ -60,8 +61,9 @@ function createTask(datas) {
     saveDatas();
 }
 function deleteTask(element) {
-    var _a;
-    (_a = element.parentElement) === null || _a === void 0 ? void 0 : _a.remove();
+    var _a, _b, _c;
+    /**Fonction qui supprime une tâche */
+    (_c = (_b = (_a = element.parentElement) === null || _a === void 0 ? void 0 : _a.parentElement) === null || _b === void 0 ? void 0 : _b.parentElement) === null || _c === void 0 ? void 0 : _c.remove();
     saveDatas();
 }
 const toDoList = document.getElementById("list");

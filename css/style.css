@@ -82,6 +82,20 @@ ul li{
     justify-content: center;
 }
 
+span{
+    margin-bottom: 0.4rem;
+    border-radius: 1rem;
+    text-align: center;
+    width: 1.5rem;
+    height: 1.5rem;
+
+}
+
+span:hover{
+    background-color:  rgb(39, 65, 66);
+    cursor: pointer;
+}
+
 .infos{
     display: flex;
     justify-content: space-between;
