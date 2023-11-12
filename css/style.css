@@ -68,12 +68,42 @@ form{
     visibility: hidden;
 }
 
+ul{
+    display: grid;
+    justify-content: space-between;
+    color: aliceblue;
+}
+
+ul li{
+    list-style: none;
+    margin: 1rem;
+    padding: 0.3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.infos{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tasks{
+    display: grid;
+    justify-content: center;
+    color: aliceblue;
+    background-color: cadetblue;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    box-shadow: 0.5rem 0.5rem rgb(39, 65, 66);
+}
+
 .new-todo{
     background-color: cadetblue;
     padding: 1rem;
     margin: 1rem;
     border-radius: 0.2rem;
     visibility: hidden;
+    display: none;
 }
 
 .flex-center{
