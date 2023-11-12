@@ -33,6 +33,7 @@ function getTask() {
     return res;
 }
 function saveDatas() {
+    /**Fonction qui met à jour les données */
     sessionStorage.setItem("tasks", toDoList.innerHTML);
 }
 function createTask(datas) {
@@ -44,15 +45,20 @@ function createTask(datas) {
     const span1 = document.createElement("span");
     const date = document.createElement("p");
     const title = document.createElement("h3");
+    const description = document.createElement("p");
     span0.innerHTML = "ⓧ";
-    span1.innerHTML = "ⓘ";
+    span1.innerHTML = "↓";
     span0.setAttribute("onclick", "deleteTask(this)");
+    span1.setAttribute("onclick", "showDescription(this)");
+    description.setAttribute("id", "description-p");
     div.className = "tasks";
     divInfos.className = "infos";
     title.innerHTML = `${datas[0]}`;
     date.innerHTML = `${datas[1]}`;
+    description.innerHTML = `${datas[2]}`;
     divInfos.appendChild(span0);
     divInfos.appendChild(span1);
+    title.appendChild(description);
     div.appendChild(divInfos);
     div.appendChild(title);
     div.appendChild(date);
@@ -65,6 +71,18 @@ function deleteTask(element) {
     /**Fonction qui supprime une tâche */
     (_c = (_b = (_a = element.parentElement) === null || _a === void 0 ? void 0 : _a.parentElement) === null || _b === void 0 ? void 0 : _b.parentElement) === null || _c === void 0 ? void 0 : _c.remove();
     saveDatas();
+}
+function showDescription(element) {
+    const description = document.getElementById("description-p");
+    if (element.innerHTML == "↓") {
+        element.innerHTML = "↑";
+        description.style.visibility = "visible";
+        description.style.display = "intitial";
+    }
+    else {
+        element.innerHTML = "↓";
+        description.style.visibility = "hidden";
+    }
 }
 const toDoList = document.getElementById("list");
 if (toDoList != undefined) {

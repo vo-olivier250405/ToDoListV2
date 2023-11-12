@@ -129,3 +129,7 @@ span:hover{
     display: grid;
     justify-content: center;
 }
+
+#description-p{
+    visibility: hidden;
+}
