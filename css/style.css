@@ -45,6 +45,16 @@ button{
     padding: 0.5rem;
 }
 
+main{
+    display: grid;
+    justify-content: center;
+}
+
+button.add{
+    padding: 0.5rem;
+    margin: 1rem;
+}
+
 h2{
     margin-top: 1rem;
     color: aliceblue;
@@ -54,12 +64,18 @@ div.flex-center{
     justify-content: space-around;
 }
 
+form{
+    visibility: hidden;
+}
+
 .new-todo{
     background-color: cadetblue;
     padding: 1rem;
     margin: 1rem;
     border-radius: 0.2rem;
+    visibility: hidden;
 }
+
 .flex-center{
     display:flex;
     justify-content: center;

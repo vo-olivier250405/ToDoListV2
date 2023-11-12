@@ -11,29 +11,30 @@
         <h2 class="flex-center">TODO-LIST TO SHIT ON CLEMENT</h2>
     </header>
     <main>
+        <button onclick="showForm()" class="add">Create task</button>
         <section class="new-todo">
             <form class="flex-grid" action="" method="get">
                 <label for="title">TODO name</label>
-                <input type="text" name="title" placeholder="Add a name to your todo">
+                <input type="text" name="title" placeholder="Add a name to your todo" id="name">
 
                 <label for="deadline">Deadline</label>
-                <input type="date" name="deadline" id="">
+                <input type="date" name="deadline" id="date">
 
                 <label for="descripition">Descripition (optional)</label>
-                <textarea name="descripition" id="" cols="35" rows="5" placeholder="Add a description to your task"></textarea><br>
+                <textarea name="descripition" id="description" cols="35" rows="5" placeholder="Add a description to your task"></textarea><br>
                 
                 <div class="flex-center">
                     <label for="priority">Chill</label>
-                    <input type="radio" name="priority" id="">
+                    <input type="radio" name="priority" id="priority">
 
                     <label for="priority">Medium</label>
-                    <input type="radio" name="priority" id="">
+                    <input type="radio" name="priority" id="priority">
 
                     <label for="priority">High Piority</label>
-                    <input type="radio" name="priority" id="">
+                    <input type="radio" name="priority" id="priority">
                 </div>
 
-                <button type="submit">Add a new task</button>
+                <button onclick="getDatas()" type="submit">Add a new task</button>
             </form>
         </section>
         <section class="todo-list"></section>

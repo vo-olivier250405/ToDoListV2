@@ -2,7 +2,7 @@
 	"name": "typescript",
 	"version": "1.0.0",
 	"description": "Example package.json for the ETNA TS pool",
-	"main": "build/index.js",
+	"main": "scripts/index.js",
 	"scripts": {
 		"dev": "tsc && node .",
 		"build": "tsc",
